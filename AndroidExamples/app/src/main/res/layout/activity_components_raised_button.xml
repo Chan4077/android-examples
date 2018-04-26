@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center"
+	android:alignmentMode="alignBounds"
+	android:columnCount="2">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginBottom="8dp"
+		android:text="@string/normal" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginBottom="8dp"
+		android:text="@string/disabled" />
+
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="4dp"
+		android:text="@string/Button" />
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="4dp"
+		android:enabled="false"
+		android:text="@string/Button" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_columnSpan="2"
+		android:layout_gravity="center"
+		android:layout_marginBottom="8dp"
+		android:text="@string/custom_style" />
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="4dp"
+		android:text="@string/Button"
+		android:theme="@style/MyButton" />
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="4dp"
+		android:enabled="false"
+		android:text="@string/Button"
+		android:theme="@style/MyButton" />
+
+</GridLayout>

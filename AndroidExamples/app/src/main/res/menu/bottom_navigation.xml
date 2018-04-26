@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:id="@+id/action_components"
+		android:icon="@drawable/ic_shape_24dp"
+		android:title="@string/action_components_title" />
+	<item
+		android:id="@+id/action_patterns"
+		android:icon="@drawable/ic_puzzle_24dp"
+		android:title="@string/action_patterns_title" />
+	<item
+		android:id="@+id/action_libs"
+		android:icon="@drawable/ic_package_24dp"
+		android:title="@string/action_libs_title" />
+</menu>

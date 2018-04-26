@@ -1,0 +1,22 @@
+[
+	{
+		"title": "CardView",
+		"itemsArr": [
+			{
+				"id": 300,
+				"title": "Cards",
+				"description": "An example of Android Support Library's CardView."
+			}
+		]
+	},
+	{
+		"title": "RecyclerView",
+		"itemsArr": [
+			{
+				"id": 310,
+				"title": "RecyclerView",
+				"description": "An example of Android Support Library's RecyclerView."
+			}
+		]
+	}
+]

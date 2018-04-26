@@ -1,0 +1,242 @@
+[
+	{
+		"title": "Buttons",
+		"itemsArr": [
+			{
+				"id": 10,
+				"title": "Raised Button",
+				"description": "A typically rectangular material button that lifts and displays ink reactions on press."
+			},
+			{
+				"id": 11,
+				"title": "Flat Button",
+				"description": "A button made of ink that displays ink reactions on press but does not lift."
+			},
+			{
+				"id": 12,
+				"title": "Floating Action Button",
+				"description": "Floating action buttons are used for a promoted action."
+			},
+			{
+				"id": 13,
+				"title": "Icon Button (ImageButton)",
+				"description": "Icon buttons are typically used in a toolbar to indicate an action."
+			}
+		]
+	},
+	{
+		"title": "",
+		"itemsArr": [
+			{
+				"id": 20,
+				"title": "",
+				"description": ""
+			}
+		]
+	},
+	{
+		"title": "Dialogs",
+		"itemsArr": [
+			{
+				"id": 30,
+				"title": "Alerts",
+				"description": "Alerts are urgent interruptions, requiring acknowledgement, that inform the user about a situation."
+			},
+			{
+				"id": 31,
+				"title": "Confirmation dialogs",
+				"description": "Confirmation dialogs require users to explicitly confirm their choice before an option is committed."
+			}
+		]
+	},
+	{
+		"title": "Menus",
+		"itemsArr": [
+			{
+				"id": 40,
+				"title": "Menu",
+				"description": "Menus allow users to take an action by selecting from a list of choices revealed upon opening a temporary, new sheet of material."
+			},
+			{
+				"id": 41,
+				"title": "Styled Menu",
+				"description": "Menus allow users to take an action by selecting from a list of choices revealed upon opening a temporary, new sheet of material."
+			}
+		]
+	},
+	{
+		"title": "Pickers",
+		"itemsArr": [
+			{
+				"id": 50,
+				"title": "Date Picker",
+				"description": "A dialog picker is used to select a single date on mobile. The selected day is indicated by a filled circle. The current day is indicated by a different color and type weight."
+			},
+			{
+				"id": 51,
+				"title": "Time Picker",
+				"description": "A time picker adjusts to a user’s preferred time setting, i.e. the 12-hour or 24-hour format. A dialog picker is used to select a single time (hours:minutes) on mobile."
+			}
+		]
+	},
+	{
+		"title": "Progress",
+		"itemsArr": [
+			{
+				"id": 60,
+				"title": "Circular Progress",
+				"description": "Minimize visual changes that occur while your app loads content by representing each operation with a single activity indicator."
+			},
+			{
+				"id": 61,
+				"title": "Linear Progress",
+				"description": "A linear progress indicator should always fill from 0 to 100 and never decrease in value."
+			}
+		]
+	},
+	{
+		"title": "Selection controls",
+		"itemsArr": [
+			{
+				"id": 70,
+				"title": "Check Box",
+				"description": "Checkboxes allow the user to select multiple options from a set."
+			},
+			{
+				"id": 71,
+				"title": "Radio Button",
+				"description": "Radio buttons allow the user to select one option from a set."
+			},
+			{
+				"id": 72,
+				"title": "Switch",
+				"description": "On/off switches toggle the state of a single option."
+			}
+		]
+	},
+	{
+		"title": "",
+		"itemsArr": [
+			{
+				"id": 80,
+				"title": "",
+				"description": ""
+			}
+		]
+	},
+	{
+		"title": "Message alerts",
+		"itemsArr": [
+			{
+				"id": 90,
+				"title": "Snack Bar",
+				"description": "Snackbars provide lightweight feedback about an operation by showing a brief message at the bottom of the screen."
+			},
+			{
+				"id": 91,
+				"title": "Toast",
+				"description": "Toasts are similar to snackbars but do not contain actions and cannot be swiped off screen."
+			}
+		]
+	},
+	{
+		"title": "Tabs",
+		"itemsArr": [
+			{
+				"id": 100,
+				"title": "Text only",
+				"description": "Tabs make it easy to explore and switch between different views or functional aspects of an app or to browse categorized data sets."
+			},
+			{
+				"id": 101,
+				"title": "Icons only",
+				"description": "Tabs make it easy to explore and switch between different views or functional aspects of an app or to browse categorized data sets."
+			},
+			{
+				"id": 102,
+				"title": "Icons and Text",
+				"description": "Tabs make it easy to explore and switch between different views or functional aspects of an app or to browse categorized data sets."
+			},
+			{
+				"id": 103,
+				"title": "Styled",
+				"description": "Tabs make it easy to explore and switch between different views or functional aspects of an app or to browse categorized data sets."
+			}
+		]
+	},
+	{
+		"title": "Text fields",
+		"itemsArr": [
+			{
+				"id": 110,
+				"title": "Text field",
+				"description": "Text fields allow the user to input text, select text (cut, copy, paste), and lookup data via auto-completion."
+			},
+			{
+				"id": 111,
+				"title": "Single-line text field",
+				"description": "Single-line fields automatically scroll their content to the left as the text input cursor reaches the right edge of the input field."
+			},
+			{
+				"id": 112,
+				"title": "Multi-line text field",
+				"description": "Multi-line text fields automatically break to a new line for overflow text and scroll vertically when the cursor reaches the lower edge."
+			},
+			{
+				"id": 113,
+				"title": "Full-width text field",
+				"description": "Full-width text fields are useful for more in-depth tasks."
+			},
+			{
+				"id": 114,
+				"title": "Floating labels",
+				"description": "When the user engages with the text input field, the floating inline labels move to float above the field."
+			},
+			{
+				"id": 115,
+				"title": "User input errors",
+				"description": "Help users fix input errors as soon as they are detected. Disable the submission of a form if errors are detected, and if detected only after form submission, clearly explain the error and how to fix it."
+			}
+		]
+	},
+	{
+		"title": "Toolbars",
+		"itemsArr": [
+			{
+				"id": 120,
+				"title": "Default Toolbar",
+				"description": "Toolbars appear a step above the sheet of paper affected by their actions."
+			},
+			{
+				"id": 121,
+				"title": "Styled Toolbar",
+				"description": "Toolbars appear a step above the sheet of paper affected by their actions."
+			},
+			{
+				"id": 122,
+				"title": "Toolbar with actions",
+				"description": "Toolbars appear a step above the sheet of paper affected by their actions."
+			},
+			{
+				"id": 123,
+				"title": "Toolbar with more menu",
+				"description": "Toolbars appear a step above the sheet of paper affected by their actions."
+			},
+			{
+				"id": 124,
+				"title": "Toolbar with back button",
+				"description": "Toolbars appear a step above the sheet of paper affected by their actions."
+			}
+		]
+	},
+	{
+		"title": "Other",
+		"itemsArr": [
+			{
+				"id": 130,
+				"title": "Rating Bar",
+				"description": "A rating bar, typically used for rating an action."
+			}
+		]
+	}
+]
