@@ -1,12 +1,11 @@
 package com.edricchan.androidexamples.ui.home;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-
 import com.edricchan.androidexamples.R;
 import com.edricchan.androidexamples.ui.fragments.home.ComponentsFragment;
 import com.edricchan.androidexamples.ui.fragments.home.PatternsFragment;
@@ -33,10 +32,10 @@ public class HomeActivity extends AppCompatActivity {
 						selectedFragment = LibsFragment.newInstance();
 						break;
 				}
-				getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, selectedFragment).commit();
+				getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, selectedFragment).commit();
 				return true;
 			}
 		});
-		getFragmentManager().beginTransaction().add(R.id.fragmentContainer, ComponentsFragment.newInstance()).commit();
+		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainer, ComponentsFragment.newInstance()).commit();
 	}
 }
