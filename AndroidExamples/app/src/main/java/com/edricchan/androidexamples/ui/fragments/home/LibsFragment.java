@@ -1,9 +1,9 @@
 package com.edricchan.androidexamples.ui.fragments.home;
 
-import android.app.Fragment;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,7 +12,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.edricchan.androidexamples.R;
 import com.edricchan.androidexamples.adapter.ItemAdapter;
 import com.edricchan.androidexamples.model.data.ChildItem;
@@ -23,18 +22,17 @@ import com.edricchan.androidexamples.ui.data.TitleDisplayable;
 import com.edricchan.androidexamples.utils.IOUtils;
 import com.edricchan.androidexamples.utils.SharedUtils;
 import com.google.gson.Gson;
-
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
+
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class LibsFragment extends Fragment {
 	private ItemAdapter mAdapter;
