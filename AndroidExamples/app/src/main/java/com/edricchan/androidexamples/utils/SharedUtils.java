@@ -1,7 +1,7 @@
 package com.edricchan.androidexamples.utils;
 
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import com.edricchan.androidexamples.ui.components.ComponentsFlatButtonActivity;
 import com.edricchan.androidexamples.ui.components.ComponentsRaisedButtonActivity;
