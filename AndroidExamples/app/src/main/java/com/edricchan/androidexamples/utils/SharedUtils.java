@@ -1,5 +1,7 @@
 package com.edricchan.androidexamples.utils;
 
+import android.app.Activity;
+import androidx.fragment.app.FragmentActivity;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
@@ -16,7 +18,7 @@ public class SharedUtils {
 	 * @param id       The id of the example
 	 * @param demo     The demo's text to be shown if the demo isn't available
 	 */
-	public static void startExample(AppCompatActivity activity, int id, String demo, View snackbarView) {
+	public static void startExample(Activity activity, int id, String demo, View snackbarView) {
 		switch (id) {
 			case ItemID.COMPONENTS_RAISED_BUTTON:
 				ComponentsRaisedButtonActivity.start(activity);
@@ -30,11 +32,11 @@ public class SharedUtils {
 		}
 	}
 
-	public static void startExample(AppCompatActivity activity, ItemDisplayable displayable) {
+	public static void startExample(Activity activity, ItemDisplayable displayable) {
 		startExample(activity, displayable.getId(), displayable.getTitle(), activity.findViewById(android.R.id.content));
 	}
 
-	public static void startExample(AppCompatActivity activity, ItemDisplayable displayable, View snackbarView) {
+	public static void startExample(Activity activity, ItemDisplayable displayable, View snackbarView) {
 		startExample(activity, displayable.getId(), displayable.getTitle(), snackbarView);
 	}
 }
