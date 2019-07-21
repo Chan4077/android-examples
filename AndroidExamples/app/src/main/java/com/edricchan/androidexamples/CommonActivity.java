@@ -1,14 +1,18 @@
 package com.edricchan.androidexamples;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import androidx.annotation.LayoutRes;
 import androidx.annotation.MenuRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceManager;
+
 import com.edricchan.androidexamples.utils.SharedUtils;
 
 /**
@@ -81,10 +85,25 @@ public abstract class CommonActivity extends AppCompatActivity {
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if (savedInstanceState == null) {
+
+		SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+		boolean applyThemeToExamples = preferences.getBoolean("pref_apply_theme_examples", true);
+		// If the activity is an example activity and the Apply theme to examples switch is toggled on,
+		// we should allow theming. Otherwise, if the switch is off, we shouldn't allow theming unless
+		// the activity isn't an example activity.
+		boolean shouldApplyTheme = false;
+		if (isExampleActivity()) {
+			if (applyThemeToExamples) {
+				shouldApplyTheme = true;
+			}
+		} else {
+			shouldApplyTheme = true;
+		}
+		if (savedInstanceState == null && shouldApplyTheme) {
 			SharedUtils.initAppTheme(this);
 			SharedUtils.initAppDarkTheme(this);
 		}
+
 		getSupportActionBar().setDisplayHomeAsUpEnabled(getDisplayHomeAsUpEnabled());
 
 		if (getLayoutRes() != RES_NONE) {
