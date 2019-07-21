@@ -17,6 +17,9 @@
 			</intent-filter>
 		</activity>
 
+		<activity android:name=".ui.settings.SettingsActivity"
+		          android:label="@string/title_activity_settings"/>
+
 		<!-- Components -->
 
 		<!-- Buttons -->
