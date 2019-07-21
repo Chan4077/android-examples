@@ -5,17 +5,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.edricchan.androidexamples.ExampleActivity;
 import com.edricchan.androidexamples.R;
 
-public class ComponentsRaisedButtonActivity extends AppCompatActivity {
+public class ComponentsRaisedButtonActivity extends ExampleActivity {
 	public static void start(@NonNull Activity activity) {
 		Intent intent = new Intent(activity, ComponentsRaisedButtonActivity.class);
 		activity.startActivity(intent);
 	}
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_components_raised_button);
+	public int getLayoutRes() {
+		return R.layout.activity_components_raised_button;
 	}
 }
