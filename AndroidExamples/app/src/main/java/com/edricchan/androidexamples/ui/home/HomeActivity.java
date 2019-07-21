@@ -1,21 +1,25 @@
 package com.edricchan.androidexamples.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import androidx.fragment.app.Fragment;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import com.edricchan.androidexamples.CommonActivity;
 import com.edricchan.androidexamples.R;
 import com.edricchan.androidexamples.ui.fragments.home.ComponentsFragment;
-import com.edricchan.androidexamples.ui.fragments.home.PatternsFragment;
 import com.edricchan.androidexamples.ui.fragments.home.LibsFragment;
+import com.edricchan.androidexamples.ui.fragments.home.PatternsFragment;
+import com.edricchan.androidexamples.ui.settings.SettingsActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends CommonActivity {
+	private static String TAG = HomeActivity.class.getSimpleName();
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_home);
+
 		BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
 		bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 			@Override
@@ -37,5 +41,19 @@ public class HomeActivity extends AppCompatActivity {
 			}
 		});
 		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainer, ComponentsFragment.newInstance()).commit();
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+		if (item.getItemId() == R.id.action_settings) {
+			startActivity(new Intent(this, SettingsActivity.class));
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public int getLayoutRes() {
+		return R.layout.activity_home;
 	}
 }
