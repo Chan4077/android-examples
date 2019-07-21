@@ -18,7 +18,7 @@ import com.edricchan.androidexamples.ui.data.ItemID;
 import com.google.android.material.snackbar.Snackbar;
 
 public class SharedUtils {
-	private static String TAG = SharedUtils.class.getSimpleName();
+	private final static String TAG = SharedUtils.class.getSimpleName();
 
 	public static void initAppDarkTheme(Activity activity) {
 		SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);

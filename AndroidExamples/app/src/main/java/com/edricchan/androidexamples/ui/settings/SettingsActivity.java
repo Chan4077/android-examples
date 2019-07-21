@@ -1,10 +1,12 @@
 package com.edricchan.androidexamples.ui.settings;
 
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+
 import com.edricchan.androidexamples.CommonActivity;
 import com.edricchan.androidexamples.ui.settings.fragment.SettingsFragment;
 import com.edricchan.androidexamples.utils.SharedUtils;

@@ -2,16 +2,18 @@ package com.edricchan.androidexamples.ui.fragments.home;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.edricchan.androidexamples.R;
 import com.edricchan.androidexamples.adapter.ItemAdapter;
 import com.edricchan.androidexamples.model.data.ChildItem;
@@ -21,17 +23,16 @@ import com.edricchan.androidexamples.ui.data.TitleDisplayable;
 import com.edricchan.androidexamples.utils.IOUtils;
 import com.edricchan.androidexamples.utils.SharedUtils;
 import com.google.gson.Gson;
-import rx.Observable;
-import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
-import rx.functions.Func1;
-import rx.schedulers.Schedulers;
 
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import rx.Observable;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Func1;
+import rx.schedulers.Schedulers;
 
 public class PatternsFragment extends Fragment {
 	private ItemAdapter mAdapter;
@@ -51,7 +52,7 @@ public class PatternsFragment extends Fragment {
 
 	private void initRecycleView() {
 		mAdapter = new ItemAdapter();
-		mAdapter.setListener(displayable -> handleDocumentClick(displayable));
+		mAdapter.setListener(this::handleDocumentClick);
 
 		LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
 		RecyclerView recyclerView = rootView.findViewById(R.id.examplesRecyclerView);

@@ -23,7 +23,7 @@ public class ItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 	private static final int ITEM_TYPE_TITLE = 1;
 	private static final int ITEM_TYPE_DOC = 2;
 
-	private List<IViewType> mDataList;
+	private final List<IViewType> mDataList;
 	private Listener mListener;
 
 	public ItemAdapter() {
@@ -31,7 +31,7 @@ public class ItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 	}
 
 	@Override
-	public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+	public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 		switch (viewType) {
 			case ITEM_TYPE_TITLE:
 				View confessionView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_title, parent, false);
@@ -128,7 +128,7 @@ public class ItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 	private static class TitleViewHolder extends RecyclerView.ViewHolder {
 
-		private TextView txtTitle;
+		private final TextView txtTitle;
 
 		public TitleViewHolder(View v) {
 			super(v);
@@ -139,9 +139,9 @@ public class ItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 	private static class DocumentViewHolder extends RecyclerView.ViewHolder {
 
-		private LinearLayout layoutDoc;
-		private TextView txtTitle;
-		private TextView txtDescription;
+		private final LinearLayout layoutDoc;
+		private final TextView txtTitle;
+		private final TextView txtDescription;
 //        private ImageView imgIcon;
 //        private ViewGroup imageHolder;
 

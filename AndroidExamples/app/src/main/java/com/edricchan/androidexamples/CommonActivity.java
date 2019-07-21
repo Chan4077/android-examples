@@ -38,7 +38,7 @@ public abstract class CommonActivity extends AppCompatActivity {
 	/**
 	 * Represents the default resource value.
 	 */
-	public static int RES_NONE = 0;
+	public final static int RES_NONE = 0;
 
 	/**
 	 * The layout resource to be set on {@link android.app.Activity#setContentView(int)}.<br>
@@ -47,7 +47,7 @@ public abstract class CommonActivity extends AppCompatActivity {
 	 * @return A valid layout resource reference.
 	 */
 	@LayoutRes
-	public int getLayoutRes() {
+	protected int getLayoutRes() {
 		return RES_NONE;
 	}
 
@@ -58,7 +58,7 @@ public abstract class CommonActivity extends AppCompatActivity {
 	 * @return A valid menu resource reference.
 	 */
 	@MenuRes
-	public int getMenuRes() {
+	protected int getMenuRes() {
 		return RES_NONE;
 	}
 
@@ -69,7 +69,7 @@ public abstract class CommonActivity extends AppCompatActivity {
 	 *
 	 * @return True if this should be enabled, false otherwise (default)
 	 */
-	public boolean getDisplayHomeAsUpEnabled() {
+	protected boolean getDisplayHomeAsUpEnabled() {
 		return false;
 	}
 
@@ -78,7 +78,7 @@ public abstract class CommonActivity extends AppCompatActivity {
 	 *
 	 * @return True if the activity should be an example, false otherwise
 	 */
-	public boolean isExampleActivity() {
+	protected boolean isExampleActivity() {
 		return false;
 	}
 
