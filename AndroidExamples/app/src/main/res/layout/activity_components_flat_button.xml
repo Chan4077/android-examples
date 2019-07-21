@@ -21,14 +21,14 @@
 		android:text="@string/disabled" />
 
 	<Button
-		style="@style/Widget.AppCompat.Button.Borderless"
+		style="?attr/borderlessButtonStyle"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_margin="4dp"
 		android:text="@string/Button" />
 
 	<Button
-		style="@style/Widget.AppCompat.Button.Borderless"
+		style="?attr/borderlessButtonStyle"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_margin="4dp"
@@ -44,7 +44,7 @@
 		android:text="@string/custom_style" />
 
 	<Button
-		style="@style/Widget.AppCompat.Button.Borderless"
+		style="?attr/borderlessButtonStyle"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_margin="4dp"
@@ -52,7 +52,7 @@
 		android:theme="@style/MyButton" />
 
 	<Button
-		style="@style/Widget.AppCompat.Button.Borderless"
+		style="?attr/borderlessButtonStyle"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_margin="4dp"
