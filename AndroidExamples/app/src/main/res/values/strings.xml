@@ -1,13 +1,20 @@
 <resources>
 	<string name="app_name">Android Examples</string>
-    <!-- test strings start -->
+	<!-- test strings start -->
 
-    <string name="test_small">Lorem ipsum</string>
-    <string name="test_medium">Lorem ipsum dolor sit amet, saperet minimum ei nam, ea dicat menandri pericula vel.</string>
-    <string name="test_large">Lorem ipsum dolor sit amet, saperet minimum ei nam, ea dicat menandri pericula vel. Modus dicam eligendi cu mea, et pri viris audiam disputando, an vix choro constituto comprehensam. Eu qui ignota accusam persecuti. Eu pro probo interesset, his solum utroque insolens ex.</string>
+	<string name="test_small">Lorem ipsum</string>
+	<string name="test_medium">Lorem ipsum dolor sit amet, saperet minimum ei nam, ea dicat menandri pericula vel.
+	</string>
+	<string name="test_large">Lorem ipsum dolor sit amet, saperet minimum ei nam, ea dicat menandri pericula vel. Modus
+		dicam eligendi cu mea, et pri viris audiam disputando, an vix choro constituto comprehensam. Eu qui ignota
+		accusam persecuti. Eu pro probo interesset, his solum utroque insolens ex.
+	</string>
 
-    <!-- test strings end -->
+	<!-- test strings end -->
+	<eat-comment/>
+
 	<!-- BottomNavigationView -->
+	<eat-comment/>
 	<string name="action_components_title">Components</string>
 	<string name="action_patterns_title">Patterns</string>
 	<string name="action_libs_title">Libraries</string>
@@ -69,6 +76,8 @@
 	<string name="pref_about_credits_title">Based on materialdoc.com</string>
 
 	<!-- Strings adapted from materialdoc.doc -->
+	<eat-comment/>
+
 	<string name="normal">Normal</string>
 	<string name="disabled">Disabled</string>
 	<string name="custom_style">Custom Style</string>
@@ -105,7 +114,9 @@
 	<string name="show_multi_choice_dialog">Show multi choice dialog</string>
 	<string name="dialog_title">Use Google\'s location service?</string>
 	<string name="confirmation_dialog_title">Phone ringtone</string>
-	<string name="dialog_message">Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</string>
+	<string name="dialog_message">Let Google help apps determine location. This means sending anonymous location data to
+		Google, even when no apps are running.
+	</string>
 	<string name="show_snack_bar">Show snack bar</string>
 	<string name="hide_snack_bar">Hide snack bar</string>
 	<string name="show_styled_snack_bar">Show styled stack bar</string>
