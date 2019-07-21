@@ -2,9 +2,8 @@ package com.edricchan.androidexamples.ui.components;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
+
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.edricchan.androidexamples.ExampleActivity;
 import com.edricchan.androidexamples.R;
