@@ -156,6 +156,6 @@ public class LibsFragment extends Fragment {
 	}
 
 	private void handleDocumentClick(ItemDisplayable displayable) {
-		SharedUtils.startExample(getActivity(), displayable, getActivity().findViewById(R.id.homeContent));
+		SharedUtils.startExample(getActivity(), displayable, getActivity().findViewById(R.id.coordinatorLayoutContainer));
 	}
 }
