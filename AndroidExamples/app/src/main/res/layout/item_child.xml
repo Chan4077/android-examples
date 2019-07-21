@@ -18,23 +18,21 @@
 
 	<TextView
 		android:id="@+id/txtTitle"
-		style="@style/TextAppearance.AppCompat.Title"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:ellipsize="end"
 		android:maxLines="4"
-		android:textColor="@color/grey_700"
+		android:textAppearance="?attr/textAppearanceHeadline6"
 		tools:text="@string/test_small"/>
 
 	<TextView
 		android:id="@+id/txtDescription"
-		style="@style/TextAppearance.AppCompat.Body1"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="4dp"
 		android:ellipsize="end"
 		android:maxLines="4"
-		android:textColor="@color/grey_400"
+		android:textAppearance="?attr/textAppearanceBody2"
 		tools:text="@string/test_large"/>
 
 </LinearLayout>
