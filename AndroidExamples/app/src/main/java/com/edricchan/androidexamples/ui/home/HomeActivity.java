@@ -53,6 +53,11 @@ public class HomeActivity extends CommonActivity {
 	}
 
 	@Override
+	public int getMenuRes() {
+		return R.menu.menu_home;
+	}
+
+	@Override
 	public int getLayoutRes() {
 		return R.layout.activity_home;
 	}

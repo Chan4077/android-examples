@@ -13,10 +13,61 @@
 	<string name="action_libs_title">Libraries</string>
 
 	<!-- Activity names -->
+	<eat-comment/>
+
+	<string name="title_activity_settings">Settings</string>
 	<string name="activity_components_flat_button">Flat Button | Components</string>
 	<string name="activity_components_raised_button">Raised Button | Components</string>
 	<string name="activity_components_image_button">Icon button | Components</string>
 	<string name="activity_components_togglebutton">ToggleButton | Components</string>
+
+	<!-- Settings fragment strings -->
+	<eat-comment/>
+
+	<string name="pref_category_general_title">General</string>
+	<string name="pref_theme_title">Theme</string>
+	<string name="pref_theme_summary">Select a theme to be used for all of the examples. Applies on restart of
+		the app.
+	</string>
+	<string name="pref_theme_default">material_components</string>
+	<string-array name="pref_theme_entries">
+		<item>Theme.App</item>
+		<item>Theme.App.MaterialComponents</item>
+		<item>Theme.App.MaterialComponents.DayNight</item>
+	</string-array>
+	<string-array name="pref_theme_entry_values" translatable="false">
+		<item>bridge</item>
+		<item>material_components</item>
+		<item>material_components_daynight</item>
+	</string-array>
+	<string name="pref_apply_theme_examples_title">Apply theme to examples</string>
+	<string name="pref_dark_theme_title">Dark theme</string>
+	<string name="pref_dark_theme_summary">Enables dark mode for all of the examples. Applies on restart of the
+		app.
+	</string>
+	<string name="pref_dark_theme_default">auto_battery_saver</string>
+	<string-array name="pref_dark_theme_entries">
+		<item>Always on</item>
+		<item>Automatic (battery saver)</item>
+		<item>Follow system</item>
+		<item>Always off</item>
+	</string-array>
+	<string-array name="pref_dark_theme_entry_values" translatable="false">
+		<item>always_on</item>
+		<item>auto_battery_saver</item>
+		<item>follow_system</item>
+		<item>always_off</item>
+	</string-array>
+	<string name="pref_category_about_title">About</string>
+	<string name="pref_about_app_info_title">App info</string>
+	<string name="pref_about_app_info_summary">Visit the app\'s info page in Settings</string>
+	<string name="pref_about_app_version_title">App version</string>
+	<string name="pref_about_app_src_title">Source code</string>
+	<string name="pref_about_app_src_summary">Visit the app\'s source code on GitHub</string>
+	<string name="pref_about_author_title">Author</string>
+	<string name="pref_about_author_summary">Edric Chan</string>
+	<string name="pref_about_credits_title">Based on materialdoc.com</string>
+
 	<!-- Strings adapted from materialdoc.doc -->
 	<string name="normal">Normal</string>
 	<string name="disabled">Disabled</string>
