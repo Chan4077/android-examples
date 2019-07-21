@@ -18,5 +18,25 @@
 				"description": "An example of Android Support Library's RecyclerView."
 			}
 		]
+	},
+	{
+		"title": "MediaPlayer",
+		"itemsArr": [
+			{
+				"id": 320,
+				"title": "MediaPlayer",
+				"description": "MediaPlayer is a library in the Android multimedia framework which includes support for playing a variety of common media types, which makes integrating audio, video and images into applications easy."
+			},
+			{
+				"id": 321,
+				"title": "MediaPlayer with notification",
+				"description": "Demo which shows how to integrate the MediaPlayer library with Android notifications and notification channels, if applicable."
+			},
+			{
+				"id": 322,
+				"title": "MediaPlayer with streaming",
+				"description": "Demo which shows how to stream music from online."
+			}
+		]
 	}
 ]
