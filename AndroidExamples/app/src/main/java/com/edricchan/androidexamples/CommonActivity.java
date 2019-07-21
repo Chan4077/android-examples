@@ -24,6 +24,7 @@ import com.edricchan.androidexamples.utils.SharedUtils;
  * <li>Automatically handles the home button in
  * {@link android.app.Activity#onOptionsItemSelected(MenuItem)} for you!
  * (See {@link CommonActivity#getDisplayHomeAsUpEnabled()}</li>
+ * <li>Adds the ability to specify if the child activity is an example activity (See {@link CommonActivity#isExampleActivity()})</li>
  * <li>Auto-initialises the setting of the theme/dark theme (See {@link SharedUtils#initAppTheme(Activity)} and
  * {@link SharedUtils#initAppDarkTheme(Activity)})</li>
  * <li>And more potential features in the future!</li>
@@ -65,6 +66,15 @@ public abstract class CommonActivity extends AppCompatActivity {
 	 * @return True if this should be enabled, false otherwise (default)
 	 */
 	public boolean getDisplayHomeAsUpEnabled() {
+		return false;
+	}
+
+	/**
+	 * Whether the activity is an example.
+	 *
+	 * @return True if the activity should be an example, false otherwise
+	 */
+	public boolean isExampleActivity() {
 		return false;
 	}
 
