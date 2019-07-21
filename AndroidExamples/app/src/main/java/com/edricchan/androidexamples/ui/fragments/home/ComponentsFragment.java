@@ -38,6 +38,7 @@ import rx.schedulers.Schedulers;
 public class ComponentsFragment extends Fragment {
 	private ItemAdapter mAdapter;
 	private View rootView;
+	private final String TAG = ComponentsFragment.class.getSimpleName();
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -71,7 +72,7 @@ public class ComponentsFragment extends Fragment {
 				.subscribe(dataList -> {
 					mAdapter.setData(removeEmptyItems(dataList));
 					mAdapter.notifyDataSetChanged();
-				}, e -> Log.e("ERROR", "Error during loading json data list", e));
+				}, e -> Log.e(TAG, "Error when loading JSON data list:", e));
 	}
 
 	@NonNull

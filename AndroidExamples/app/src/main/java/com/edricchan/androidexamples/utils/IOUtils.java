@@ -14,13 +14,14 @@ import java.io.OutputStream;
 import java.net.URL;
 
 public final class IOUtils {
+	private static final String TAG = IOUtils.class.getSimpleName();
 
 	public static void copy(InputStream is, File file) {
 		try {
 			FileOutputStream os = new FileOutputStream(file);
 			copy(is, os);
 		} catch (FileNotFoundException e) {
-			Log.e("ERROR", e.toString(), e);
+			Log.e(TAG, e.toString(), e);
 		}
 	}
 
@@ -34,7 +35,7 @@ public final class IOUtils {
 			}
 
 		} catch (IOException e) {
-			Log.e("ERROR", e.toString(), e);
+			Log.e(TAG, e.toString(), e);
 		} finally {
 			close(is);
 			close(os);
@@ -47,7 +48,7 @@ public final class IOUtils {
 				stream.close();
 			}
 		} catch (IOException e) {
-			Log.e("ERROR", e.toString(), e);
+			Log.e(TAG, e.toString(), e);
 		}
 	}
 
@@ -57,7 +58,7 @@ public final class IOUtils {
 		try {
 			is = new URL(url).openConnection().getInputStream();
 		} catch (IOException e) {
-			Log.e("ERROR", e.toString(), e);
+			Log.e(TAG, e.toString(), e);
 		}
 
 		return is;
@@ -72,7 +73,7 @@ public final class IOUtils {
 				total.append(line);
 			}
 		} catch (IOException e) {
-			Log.e("ERROR", e.toString(), e);
+			Log.e(TAG, e.toString(), e);
 		}
 
 		return total.toString();

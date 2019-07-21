@@ -37,6 +37,7 @@ import rx.schedulers.Schedulers;
 public class PatternsFragment extends Fragment {
 	private ItemAdapter mAdapter;
 	private View rootView;
+	private final String TAG = PatternsFragment.class.getSimpleName();
 
 	public static PatternsFragment newInstance() {
 		return new PatternsFragment();
@@ -70,7 +71,7 @@ public class PatternsFragment extends Fragment {
 				.subscribe(dataList -> {
 					mAdapter.setData(removeEmptyItems(dataList));
 					mAdapter.notifyDataSetChanged();
-				}, e -> Log.d("ERROR", "Error during loading json data list", e));
+				}, e -> Log.e(TAG, "Error when loading JSON data list", e));
 	}
 
 	@NonNull
