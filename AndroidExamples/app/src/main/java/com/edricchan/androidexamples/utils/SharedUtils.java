@@ -150,7 +150,9 @@ public class SharedUtils {
 				ComponentsFlatButtonActivity.start(activity);
 				break;
 			default:
-				Snackbar.make(snackbarView, String.format("Demo for \"%1$s\" is not available", demo), Snackbar.LENGTH_LONG).show();
+				Snackbar.make(snackbarView, String.format("Demo for \"%1$s\" is not available", demo), Snackbar.LENGTH_LONG)
+						.setAnchorView(R.id.bottomNavigation)
+						.show();
 				break;
 		}
 	}
