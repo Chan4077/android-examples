@@ -109,12 +109,9 @@ public class ItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 //            viewHolder.imageHolder.setVisibility(View.VISIBLE);
 //        }
 
-		viewHolder.layoutDoc.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				if (mListener != null) {
-					mListener.onDocumentClicked(displayable);
-				}
+		viewHolder.layoutDoc.setOnClickListener(v -> {
+			if (mListener != null) {
+				mListener.onDocumentClicked(displayable);
 			}
 		});
 	}
@@ -136,7 +133,7 @@ public class ItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 		public TitleViewHolder(View v) {
 			super(v);
 
-			txtTitle = (TextView) v.findViewById(R.id.txtTitle);
+			txtTitle = v.findViewById(R.id.txtTitle);
 		}
 	}
 
@@ -151,9 +148,9 @@ public class ItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 		public DocumentViewHolder(View v) {
 			super(v);
 
-			layoutDoc = (LinearLayout) v.findViewById(R.id.layoutDoc);
-			txtTitle = (TextView) v.findViewById(R.id.txtTitle);
-			txtDescription = (TextView) v.findViewById(R.id.txtDescription);
+			layoutDoc = v.findViewById(R.id.layoutDoc);
+			txtTitle = v.findViewById(R.id.txtTitle);
+			txtDescription = v.findViewById(R.id.txtDescription);
 //            imgIcon = (ImageView) v.findViewById(R.id.imgIcon);
 //            imageHolder = (ViewGroup) v.findViewById(R.id.imageHolder);
 		}

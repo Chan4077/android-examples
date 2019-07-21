@@ -95,7 +95,6 @@ public class SharedUtils {
 			if (addToBackStack) {
 				transaction.addToBackStack(null);
 			}
-			;
 			transaction.commit();
 			// Indicate that the fragment replacement has been done.
 			return true;

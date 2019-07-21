@@ -60,7 +60,7 @@ public class LibsFragment extends Fragment {
 		});
 
 		LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-		RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.libsRecyclerView);
+		RecyclerView recyclerView = rootView.findViewById(R.id.libsRecyclerView);
 		recyclerView.setHasFixedSize(true);
 		recyclerView.setLayoutManager(layoutManager);
 		recyclerView.setItemAnimator(new DefaultItemAnimator());

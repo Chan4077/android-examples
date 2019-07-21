@@ -27,7 +27,7 @@ public final class IOUtils {
 	public static void copy(InputStream is, OutputStream os) {
 		try {
 
-			byte buf[] = new byte[1024];
+			byte[] buf = new byte[1024];
 			int len;
 			while ((len = is.read(buf)) > 0) {
 				os.write(buf, 0, len);

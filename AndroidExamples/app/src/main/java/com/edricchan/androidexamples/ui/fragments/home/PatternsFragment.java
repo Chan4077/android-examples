@@ -59,7 +59,7 @@ public class PatternsFragment extends Fragment {
 		});
 
 		LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-		RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.examplesRecyclerView);
+		RecyclerView recyclerView = rootView.findViewById(R.id.examplesRecyclerView);
 		recyclerView.setHasFixedSize(true);
 		recyclerView.setLayoutManager(layoutManager);
 		recyclerView.setItemAnimator(new DefaultItemAnimator());
