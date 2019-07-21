@@ -21,25 +21,23 @@ public class HomeActivity extends CommonActivity {
 		super.onCreate(savedInstanceState);
 
 		BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
-		bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-			@Override
-			public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-				Fragment selectedFragment = null;
-				switch (item.getItemId()) {
-					case R.id.action_components:
-						selectedFragment = ComponentsFragment.newInstance();
-						break;
-					case R.id.action_patterns:
-						selectedFragment = PatternsFragment.newInstance();
-						break;
-					case R.id.action_libs:
-						selectedFragment = LibsFragment.newInstance();
-						break;
-				}
-				getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, selectedFragment).commit();
-				return true;
+		bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+			Fragment selectedFragment = null;
+			switch (item.getItemId()) {
+				case R.id.action_components:
+					selectedFragment = ComponentsFragment.newInstance();
+					break;
+				case R.id.action_patterns:
+					selectedFragment = PatternsFragment.newInstance();
+					break;
+				case R.id.action_libs:
+					selectedFragment = LibsFragment.newInstance();
+					break;
 			}
+			getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, selectedFragment).commit();
+			return true;
 		});
+
 		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainer, ComponentsFragment.newInstance()).commit();
 	}
 

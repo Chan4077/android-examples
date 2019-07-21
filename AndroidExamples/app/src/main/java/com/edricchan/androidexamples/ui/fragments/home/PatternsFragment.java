@@ -51,12 +51,7 @@ public class PatternsFragment extends Fragment {
 
 	private void initRecycleView() {
 		mAdapter = new ItemAdapter();
-		mAdapter.setListener(new ItemAdapter.Listener() {
-			@Override
-			public void onDocumentClicked(ItemDisplayable displayable) {
-				handleDocumentClick(displayable);
-			}
-		});
+		mAdapter.setListener(displayable -> handleDocumentClick(displayable));
 
 		LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
 		RecyclerView recyclerView = rootView.findViewById(R.id.examplesRecyclerView);
@@ -71,18 +66,10 @@ public class PatternsFragment extends Fragment {
 				.map(toDisplayableList())
 				.subscribeOn(Schedulers.computation())
 				.observeOn(AndroidSchedulers.mainThread())
-				.subscribe(new Action1<List<IViewType>>() {
-					@Override
-					public void call(List<IViewType> dataList) {
-						mAdapter.setData(removeEmptyItems(dataList));
-						mAdapter.notifyDataSetChanged();
-					}
-				}, new Action1<Throwable>() {
-					@Override
-					public void call(Throwable e) {
-						Log.d("ERROR", "Error during loading json data list", e);
-					}
-				});
+				.subscribe(dataList -> {
+					mAdapter.setData(removeEmptyItems(dataList));
+					mAdapter.notifyDataSetChanged();
+				}, e -> Log.d("ERROR", "Error during loading json data list", e));
 	}
 
 	@NonNull
@@ -105,35 +92,29 @@ public class PatternsFragment extends Fragment {
 
 	@NonNull
 	private Observable.OnSubscribe<List<ChildItem>> loadDataFromAssets() {
-		return new Observable.OnSubscribe<List<ChildItem>>() {
-			@Override
-			public void call(Subscriber<? super List<ChildItem>> subscriber) {
-				try {
-					InputStream inputStream = getResources().openRawResource(R.raw.patterns);
-					String json = IOUtils.toString(inputStream);
-					Gson gson = new Gson();
-					ChildItem[] parentItemArr = gson.fromJson(json, ChildItem[].class);
+		return subscriber -> {
+			try {
+				InputStream inputStream = getResources().openRawResource(R.raw.patterns);
+				String json = IOUtils.toString(inputStream);
+				Gson gson = new Gson();
+				ChildItem[] parentItemArr = gson.fromJson(json, ChildItem[].class);
 
-					subscriber.onNext(Arrays.asList(parentItemArr));
-					subscriber.onCompleted();
-				} catch (Resources.NotFoundException e) {
-					subscriber.onError(e);
-				}
+				subscriber.onNext(Arrays.asList(parentItemArr));
+				subscriber.onCompleted();
+			} catch (Resources.NotFoundException e) {
+				subscriber.onError(e);
 			}
 		};
 	}
 
 	@NonNull
 	private Func1<List<ChildItem>, List<IViewType>> toDisplayableList() {
-		return new Func1<List<ChildItem>, List<IViewType>>() {
-			@Override
-			public List<IViewType> call(List<ChildItem> itemsList) {
-				List<IViewType> typeList = new ArrayList<>();
-				for (ChildItem item : itemsList) {
-					typeList.add(toDisplayable(item));
-				}
-				return typeList;
+		return itemsList -> {
+			List<IViewType> typeList = new ArrayList<>();
+			for (ChildItem item : itemsList) {
+				typeList.add(toDisplayable(item));
 			}
+			return typeList;
 		};
 	}
 
