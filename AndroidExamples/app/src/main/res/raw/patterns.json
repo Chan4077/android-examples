@@ -3,5 +3,10 @@
 		"id": 200,
 		"title": "Swipe to refresh",
 		"description": "Swipe to refresh manually refreshes screen content with a user action or gesture. "
+	},
+	{
+		"id": 210,
+		"title": "Notifications",
+		"description": "Notifications provide short, timely, and relevant information about your app when it’s not in use."
 	}
 ]
